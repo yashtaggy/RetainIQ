@@ -40,7 +40,7 @@ def risk_color(level):
 # ─── Sidebar Navigation ───────────────────────────────────
 st.sidebar.title("🛡️ RetainIQ")
 st.sidebar.caption("Customer Retention Copilot")
-page = st.sidebar.radio("Navigate", ["📊 Portfolio Dashboard", "👤 Customer Workspace"], label_visibility="collapsed")
+page = st.sidebar.radio("Navigate", ["📊 Portfolio Dashboard", "👤 Customer Workspace"])
 
 # ═══════════════════════════════════════════════════════════
 # PAGE 1: PORTFOLIO DASHBOARD
@@ -76,7 +76,7 @@ if page == "📊 Portfolio Dashboard":
         c3.metric("Revenue at Risk", f"₹{kpi['TOTAL_REVENUE'].iloc[0]:,.0f}")
         c4.metric("Avg Risk Score", f"{kpi['AVG_RISK'].iloc[0]}/100")
 
-    st.divider()
+    st.markdown("---")
 
     # Risk distribution
     col_chart, col_table = st.columns([1, 2])
@@ -111,14 +111,10 @@ if page == "📊 Portfolio Dashboard":
             LIMIT 50
         """)
         if not customers.empty:
-            st.dataframe(customers, use_container_width=True, hide_index=True,
-                column_config={
-                    "SCORE": st.column_config.ProgressColumn("Risk Score", min_value=0, max_value=100, format="%d"),
-                    "PREMIUM": st.column_config.NumberColumn("Premium (₹)", format="₹%d"),
-                })
+            st.dataframe(customers, use_container_width=True)
 
     # NBA summary
-    st.divider()
+    st.markdown("---")
     st.subheader("Pending Recommendations")
     nba_summary = run_query("""
         SELECT ACTION_CODE, COUNT(*) AS COUNT,
@@ -130,7 +126,7 @@ if page == "📊 Portfolio Dashboard":
         ORDER BY COUNT DESC
     """)
     if not nba_summary.empty:
-        st.dataframe(nba_summary, use_container_width=True, hide_index=True)
+        st.dataframe(nba_summary, use_container_width=True)
     else:
         st.info("All recommendations have been reviewed.")
 
@@ -163,7 +159,7 @@ elif page == "👤 Customer Workspace":
                 except Exception as e:
                     st.error(f"Copilot error: {e}")
 
-    st.divider()
+    st.markdown("---")
 
     # ─── Customer Selector ─────────────────────────────────
     col_search, col_info = st.columns([1, 3])
@@ -187,7 +183,7 @@ elif page == "👤 Customer Workspace":
                 st.caption(f"{row['CITY']}, {row['STATE']} · {row['SEGMENT']} · {row['PREFERRED_LANGUAGE']}")
 
             # ─── Risk Score + KPIs ─────────────────────────
-            st.divider()
+            st.markdown("---")
             m1, m2, m3, m4, m5 = st.columns(5)
             m1.metric("Churn Risk", f"{int(row['CHURN_RISK_SCORE'])}/100", delta=f"{row['RISK_LEVEL']}", delta_color="inverse" if row['RISK_LEVEL'] in ('Critical','High') else "off")
             m2.metric("Active Premium", f"₹{row['TOTAL_ACTIVE_PREMIUM']:,.0f}")
@@ -214,7 +210,7 @@ elif page == "👤 Customer Workspace":
                     ORDER BY START_DATE DESC
                 """, params=[cust_id.upper()])
                 if not policies.empty:
-                    st.dataframe(policies, use_container_width=True, hide_index=True)
+                    st.dataframe(policies, use_container_width=True)
                 else:
                     st.info("No policies found.")
 
@@ -226,7 +222,7 @@ elif page == "👤 Customer Workspace":
                     ORDER BY CLAIM_DATE DESC
                 """, params=[cust_id.upper()])
                 if not claims.empty:
-                    st.dataframe(claims, use_container_width=True, hide_index=True)
+                    st.dataframe(claims, use_container_width=True)
                 else:
                     st.info("No claims filed.")
 
@@ -238,7 +234,7 @@ elif page == "👤 Customer Workspace":
                     ORDER BY DUE_DATE DESC LIMIT 20
                 """, params=[cust_id.upper()])
                 if not payments.empty:
-                    st.dataframe(payments, use_container_width=True, hide_index=True)
+                    st.dataframe(payments, use_container_width=True)
                 else:
                     st.info("No payment records.")
 
@@ -251,12 +247,12 @@ elif page == "👤 Customer Workspace":
                     ORDER BY INTERACTION_TS DESC LIMIT 10
                 """, params=[cust_id.upper()])
                 if not interactions.empty:
-                    st.dataframe(interactions, use_container_width=True, hide_index=True)
+                    st.dataframe(interactions, use_container_width=True)
                 else:
                     st.info("No interaction records.")
 
             # ─── NBA Recommendation ────────────────────────
-            st.divider()
+            st.markdown("---")
             st.subheader("Recommended Action")
             nba = run_query("""
                 SELECT n.RECOMMENDATION_ID, n.ACTION_CODE, n.RECOMMENDED_ACTION,
@@ -314,7 +310,7 @@ elif page == "👤 Customer Workspace":
                 if decision == "Edit":
                     final_action = st.text_area("Edit the action", value=rec['RECOMMENDED_ACTION'], key="edit_action")
 
-                if st.button("Submit Decision", type="primary"):
+                if st.button("Submit Decision"):
                     log_id = f"LOG{uuid.uuid4().hex[:12].upper()}"
                     try:
                         session.sql("""
@@ -333,12 +329,15 @@ elif page == "👤 Customer Workspace":
                             notes if notes else None
                         ]).collect()
                         st.success(f"✅ Decision recorded: **{decision}** (Log: {log_id})")
-                        st.rerun()
+                        try:
+                            st.rerun()
+                        except AttributeError:
+                            st.experimental_rerun()
                     except Exception as e:
                         st.error(f"Failed to log decision: {e}")
 
     # ─── Recent Action Log ─────────────────────────────────
-    st.divider()
+    st.markdown("---")
     st.subheader("Recent Action Log")
     log = run_query("""
         SELECT LOG_ID, CUSTOMER_ID, ACTION_CODE, DECISION,
@@ -347,6 +346,6 @@ elif page == "👤 Customer Workspace":
         ORDER BY DECIDED_AT DESC LIMIT 20
     """)
     if not log.empty:
-        st.dataframe(log, use_container_width=True, hide_index=True)
+        st.dataframe(log, use_container_width=True)
     else:
         st.info("No decisions recorded yet.")
