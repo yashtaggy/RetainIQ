@@ -5,9 +5,12 @@ built entirely on Snowflake with a Streamlit-in-Snowflake frontend.
 
 **Account:** DAAALVW-IS38545  
 **Role:** ACCOUNTADMIN  
-**Warehouse:** COMPUTE_WH (X-Small, auto-suspend 5 min)  
+**Database:** RETAINIQ_DB  
+**Schemas:** RAW (raw data), CURATED (enriched views), APP (Streamlit objects + audit)  
+**Warehouse:** RETAINIQ_WH (X-Small, auto-suspend 60s)  
 **Confirmed Cortex features:** COMPLETE (llama3.1-8b, llama3.1-70b),
-SENTIMENT, SUMMARIZE, EXTRACT_ANSWER
+SENTIMENT, SUMMARIZE, EXTRACT_ANSWER  
+**Milestone 0 status:** COMPLETE
 
 ---
 

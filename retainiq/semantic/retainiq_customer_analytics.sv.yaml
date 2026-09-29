@@ -1,0 +1,438 @@
+name: RETAINIQ_CUSTOMER_ANALYTICS
+description: >
+  RetainIQ Customer Retention Analytics for Indian Motor Insurance.
+  One row per customer with pre-aggregated policy, claim, payment, and
+  interaction metrics plus an explainable churn risk score (0-100).
+  Use this model to answer business questions about customer retention,
+  churn risk, revenue at risk, and portfolio health.
+
+tables:
+  - name: CUSTOMER_360
+    base_table:
+      database: RETAINIQ_DB
+      schema: CURATED
+      table: CUSTOMER_360
+    description: >
+      Pre-aggregated customer 360 view. Each row is a unique customer
+      with policy totals, claim metrics, payment history, AI-enriched
+      interaction insights, and a composite churn risk score.
+      Metrics are pre-aggregated per customer so COUNT/SUM operations
+      do not double-count across one-to-many relationships.
+
+    dimensions:
+      - name: CUSTOMER_ID
+        synonyms: ["customer number", "customer code", "cust id"]
+        description: Unique customer identifier (e.g. C0001)
+        expr: CUSTOMER_ID
+        data_type: VARCHAR
+        unique: true
+
+      - name: CUSTOMER_NAME
+        synonyms: ["name", "full name", "customer name"]
+        description: Customer full name (first + last)
+        expr: FIRST_NAME || ' ' || LAST_NAME
+        data_type: VARCHAR
+
+      - name: AGE
+        synonyms: ["customer age", "age of customer"]
+        description: Customer age in years. May be NULL for ~2% of records.
+        expr: AGE
+        data_type: NUMBER
+
+      - name: GENDER
+        synonyms: ["sex"]
+        description: "Customer gender: Male or Female"
+        expr: GENDER
+        data_type: VARCHAR
+
+      - name: CITY
+        synonyms: ["location", "customer city"]
+        description: Indian city where the customer resides (e.g. Mumbai, Delhi, Bengaluru)
+        expr: CITY
+        data_type: VARCHAR
+
+      - name: STATE
+        synonyms: ["customer state", "region"]
+        description: Indian state where the customer resides
+        expr: STATE
+        data_type: VARCHAR
+
+      - name: SEGMENT
+        synonyms: ["customer segment", "customer type"]
+        description: "Customer segment: Individual, Family, or Corporate"
+        expr: SEGMENT
+        data_type: VARCHAR
+        sample_values:
+          - "Individual"
+          - "Family"
+          - "Corporate"
+
+      - name: PREFERRED_LANGUAGE
+        synonyms: ["language"]
+        description: "Customer preferred communication language (English, Hindi, Tamil, etc.)"
+        expr: PREFERRED_LANGUAGE
+        data_type: VARCHAR
+
+      - name: RISK_LEVEL
+        synonyms: ["churn risk level", "risk category", "risk tier"]
+        description: >
+          Customer churn risk classification derived from the composite score.
+          Critical (>=60), High (>=30), Medium (>=10), Low (<10).
+        expr: RISK_LEVEL
+        data_type: VARCHAR
+        sample_values:
+          - "Critical"
+          - "High"
+          - "Medium"
+          - "Low"
+
+      - name: RISK_FACTORS
+        synonyms: ["risk drivers", "churn reasons", "why at risk"]
+        description: >
+          Human-readable explanation of all risk factors contributing to
+          the churn score, with point values. Pipe-separated.
+        expr: RISK_FACTORS
+        data_type: VARCHAR
+
+      - name: NEAREST_RENEWAL_DATE
+        synonyms: ["renewal date", "policy renewal", "next renewal"]
+        description: Earliest upcoming renewal date among active policies. NULL if no active policies.
+        expr: NEAREST_RENEWAL_DATE
+        data_type: DATE
+
+      - name: COMPETITORS_NAMED
+        synonyms: ["competitors mentioned", "competitor names"]
+        description: >
+          Comma-separated list of competitor insurers mentioned by the
+          customer in interactions (e.g. HDFC Ergo, Bajaj Allianz).
+          NULL if no competitors mentioned.
+        expr: COMPETITORS_NAMED
+        data_type: VARCHAR
+
+      - name: LAST_PAID_DATE
+        synonyms: ["last payment date"]
+        description: Date of the most recent successful payment by this customer
+        expr: LAST_PAID_DATE
+        data_type: DATE
+
+    time_dimensions:
+      - name: NEAREST_RENEWAL
+        synonyms: ["upcoming renewal", "next renewal date"]
+        description: Nearest policy renewal date for time-based filtering
+        expr: NEAREST_RENEWAL_DATE
+        data_type: DATE
+
+    measures:
+      - name: CUSTOMER_COUNT
+        synonyms: ["number of customers", "total customers", "how many customers"]
+        description: Count of distinct customers
+        expr: COUNT(CUSTOMER_ID)
+        data_type: NUMBER
+        default_aggregation: count
+
+      - name: TOTAL_ACTIVE_PREMIUM
+        synonyms: ["annual premium", "premium revenue", "total premium", "active premium"]
+        description: >
+          Sum of annual premium amounts for active policies only.
+          Pre-aggregated per customer, so SUM across customers gives
+          the portfolio total without double-counting.
+        expr: TOTAL_ACTIVE_PREMIUM
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: REVENUE_AT_RISK
+        synonyms: ["premium at risk", "revenue exposure"]
+        description: >
+          Total annual premium of customers filtered in the current query.
+          Equals TOTAL_ACTIVE_PREMIUM (same value — used for semantic clarity
+          when asking about revenue exposure from churn).
+        expr: REVENUE_AT_RISK
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: CHURN_RISK_SCORE
+        synonyms: ["risk score", "churn score", "retention risk"]
+        description: >
+          Composite churn risk score from 0 (safe) to 100 (very likely to churn).
+          Formula: late_payments(max 20) + rejected_claims(max 15) +
+          outstanding_claims(max 10) + negative_sentiment(max 15) +
+          competitor_mentions(max 10) + cancellation_intent(max 15) +
+          renewal_risk(max 10) + lapsed_policies(max 5).
+        expr: CHURN_RISK_SCORE
+        data_type: NUMBER
+        default_aggregation: avg
+
+      - name: ACTIVE_POLICIES
+        synonyms: ["number of active policies", "live policies"]
+        description: Count of policies with Active status for this customer
+        expr: ACTIVE_POLICIES
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: TOTAL_POLICIES
+        synonyms: ["number of policies", "policy count"]
+        description: Total policies (all statuses) for this customer
+        expr: TOTAL_POLICIES
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: LAPSED_CANCELLED_POLICIES
+        synonyms: ["inactive policies", "lost policies"]
+        description: Count of policies with Lapsed or Cancelled status
+        expr: LAPSED_CANCELLED_POLICIES
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: TOTAL_CLAIMS
+        synonyms: ["number of claims", "claim count"]
+        description: Total claims filed by this customer across all policies
+        expr: TOTAL_CLAIMS
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: REJECTED_CLAIMS
+        synonyms: ["denied claims", "claim rejections"]
+        description: Number of claims rejected by the insurer
+        expr: REJECTED_CLAIMS
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: DELAYED_CLAIMS
+        synonyms: ["outstanding claims", "pending claims over 30 days", "stuck claims"]
+        description: Claims in Pending status for more than 30 days
+        expr: DELAYED_CLAIMS
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: OUTSTANDING_CLAIM_AMOUNT
+        synonyms: ["pending claim value", "open claim amount"]
+        description: Total INR amount of claims in Pending or Approved (not yet settled) status
+        expr: OUTSTANDING_CLAIM_AMOUNT
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: LATE_PAYMENT_COUNT
+        synonyms: ["overdue payments", "missed payments", "failed payments"]
+        description: Number of payments with Overdue or Failed status
+        expr: LATE_PAYMENT_COUNT
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: TOTAL_LATE_FEES
+        synonyms: ["late fee total", "penalty amount"]
+        description: Total late fees charged to this customer in INR
+        expr: TOTAL_LATE_FEES
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: AVG_SENTIMENT
+        synonyms: ["sentiment score", "customer sentiment", "overall sentiment"]
+        description: >
+          Average sentiment score across all interactions.
+          Range: -1.0 (very negative) to +1.0 (very positive).
+          Generated by Cortex AI SENTIMENT function.
+        expr: AVG_SENTIMENT
+        data_type: NUMBER
+        default_aggregation: avg
+
+      - name: RECENT_AVG_SENTIMENT
+        synonyms: ["recent sentiment", "latest sentiment"]
+        description: Average sentiment from interactions in the last 90 days only
+        expr: RECENT_AVG_SENTIMENT
+        data_type: NUMBER
+        default_aggregation: avg
+
+      - name: NEGATIVE_INTERACTION_COUNT
+        synonyms: ["negative interactions", "complaints count"]
+        description: Number of interactions classified as negative sentiment
+        expr: NEGATIVE_INTERACTION_COUNT
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: COMPETITOR_MENTION_COUNT
+        synonyms: ["competitor mentions", "competitor references"]
+        description: Number of interactions where the customer named a competitor insurer
+        expr: COMPETITOR_MENTION_COUNT
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: CANCELLATION_INTENT_COUNT
+        synonyms: ["cancellation requests", "cancel attempts"]
+        description: Number of interactions where the customer expressed intent to cancel
+        expr: CANCELLATION_INTENT_COUNT
+        data_type: NUMBER
+        default_aggregation: sum
+
+      - name: DAYS_TO_RENEWAL
+        synonyms: ["days until renewal", "renewal countdown"]
+        description: Days until the nearest active policy renewal. NULL if no active policy.
+        expr: DAYS_TO_RENEWAL
+        data_type: NUMBER
+        default_aggregation: avg
+
+    filters:
+      - name: CRITICAL_RISK_ONLY
+        synonyms: ["critical risk", "highest risk"]
+        description: Filters to customers with Critical risk level (score >= 60)
+        expr: RISK_LEVEL = 'Critical'
+
+      - name: HIGH_RISK_AND_ABOVE
+        synonyms: ["high risk customers", "at risk customers"]
+        description: Filters to customers with High or Critical risk level (score >= 30)
+        expr: RISK_LEVEL IN ('Critical', 'High')
+
+      - name: HAS_COMPETITOR_MENTION
+        synonyms: ["mentioned competitor", "considering competitor"]
+        description: Customers who mentioned a competitor insurer in any interaction
+        expr: COMPETITOR_MENTION_COUNT > 0
+
+      - name: RENEWAL_WITHIN_30_DAYS
+        synonyms: ["upcoming renewal", "renewing soon"]
+        description: Active customers with a policy renewal within the next 30 days
+        expr: DAYS_TO_RENEWAL IS NOT NULL AND DAYS_TO_RENEWAL <= 30
+
+      - name: HAS_LATE_PAYMENTS
+        synonyms: ["payment issues", "overdue customers"]
+        description: Customers with at least one overdue or failed payment
+        expr: LATE_PAYMENT_COUNT > 0
+
+      - name: HAS_REJECTED_CLAIMS
+        synonyms: ["claim rejected", "denied claims"]
+        description: Customers with at least one rejected insurance claim
+        expr: REJECTED_CLAIMS > 0
+
+verified_queries:
+  - name: "high_risk_customer_count"
+    question: "How many customers are at high or critical churn risk?"
+    sql: >
+      SELECT RISK_LEVEL, COUNT(*) AS CUSTOMER_COUNT
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      WHERE RISK_LEVEL IN ('Critical', 'High')
+      GROUP BY RISK_LEVEL
+      ORDER BY CUSTOMER_COUNT DESC
+
+  - name: "revenue_at_risk_by_risk_level"
+    question: "What is the total revenue at risk broken down by risk level?"
+    sql: >
+      SELECT RISK_LEVEL,
+             COUNT(*) AS CUSTOMERS,
+             SUM(REVENUE_AT_RISK) AS TOTAL_REVENUE_AT_RISK
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      GROUP BY RISK_LEVEL
+      ORDER BY TOTAL_REVENUE_AT_RISK DESC
+
+  - name: "top_10_riskiest_customers"
+    question: "Who are the top 10 customers with the highest churn risk?"
+    sql: >
+      SELECT CUSTOMER_ID,
+             FIRST_NAME || ' ' || LAST_NAME AS NAME,
+             CITY,
+             SEGMENT,
+             CHURN_RISK_SCORE,
+             RISK_LEVEL,
+             REVENUE_AT_RISK,
+             RISK_FACTORS
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      ORDER BY CHURN_RISK_SCORE DESC
+      LIMIT 10
+
+  - name: "churn_risk_by_city"
+    question: "Which cities have the highest average churn risk?"
+    sql: >
+      SELECT CITY,
+             COUNT(*) AS CUSTOMERS,
+             ROUND(AVG(CHURN_RISK_SCORE), 1) AS AVG_RISK_SCORE,
+             SUM(REVENUE_AT_RISK) AS REVENUE_AT_RISK
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      GROUP BY CITY
+      ORDER BY AVG_RISK_SCORE DESC
+
+  - name: "competitor_mention_summary"
+    question: "How many customers mentioned a competitor and what is their risk profile?"
+    sql: >
+      SELECT RISK_LEVEL,
+             COUNT(*) AS CUSTOMERS,
+             SUM(COMPETITOR_MENTION_COUNT) AS TOTAL_MENTIONS,
+             ROUND(AVG(CHURN_RISK_SCORE), 1) AS AVG_RISK_SCORE,
+             SUM(REVENUE_AT_RISK) AS REVENUE_AT_RISK
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      WHERE COMPETITOR_MENTION_COUNT > 0
+      GROUP BY RISK_LEVEL
+      ORDER BY REVENUE_AT_RISK DESC
+
+  - name: "segment_risk_breakdown"
+    question: "What is the churn risk distribution by customer segment?"
+    sql: >
+      SELECT SEGMENT,
+             COUNT(*) AS CUSTOMERS,
+             COUNT(CASE WHEN RISK_LEVEL IN ('Critical','High') THEN 1 END) AS AT_RISK,
+             ROUND(AVG(CHURN_RISK_SCORE), 1) AS AVG_RISK_SCORE,
+             SUM(TOTAL_ACTIVE_PREMIUM) AS TOTAL_PREMIUM
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      GROUP BY SEGMENT
+      ORDER BY AVG_RISK_SCORE DESC
+
+  - name: "renewal_risk_customers"
+    question: "Which at-risk customers have policies renewing within 30 days?"
+    sql: >
+      SELECT CUSTOMER_ID,
+             FIRST_NAME || ' ' || LAST_NAME AS NAME,
+             NEAREST_RENEWAL_DATE,
+             DAYS_TO_RENEWAL,
+             CHURN_RISK_SCORE,
+             RISK_LEVEL,
+             TOTAL_ACTIVE_PREMIUM,
+             RISK_FACTORS
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      WHERE DAYS_TO_RENEWAL IS NOT NULL
+        AND DAYS_TO_RENEWAL <= 30
+        AND RISK_LEVEL IN ('Critical', 'High')
+      ORDER BY CHURN_RISK_SCORE DESC
+
+  - name: "late_payment_impact"
+    question: "How do late payments affect churn risk scores?"
+    sql: >
+      SELECT
+        CASE WHEN LATE_PAYMENT_COUNT = 0 THEN '0 late'
+             WHEN LATE_PAYMENT_COUNT BETWEEN 1 AND 3 THEN '1-3 late'
+             WHEN LATE_PAYMENT_COUNT BETWEEN 4 AND 6 THEN '4-6 late'
+             ELSE '7+ late' END AS LATE_PAYMENT_BUCKET,
+        COUNT(*) AS CUSTOMERS,
+        ROUND(AVG(CHURN_RISK_SCORE), 1) AS AVG_RISK_SCORE,
+        SUM(REVENUE_AT_RISK) AS REVENUE_AT_RISK
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      GROUP BY LATE_PAYMENT_BUCKET
+      ORDER BY AVG_RISK_SCORE DESC
+
+  - name: "sentiment_vs_churn"
+    question: "What is the relationship between customer sentiment and churn risk?"
+    sql: >
+      SELECT
+        CASE WHEN RECENT_AVG_SENTIMENT >= 0.2 THEN 'Positive'
+             WHEN RECENT_AVG_SENTIMENT <= -0.2 THEN 'Negative'
+             ELSE 'Neutral' END AS SENTIMENT_BUCKET,
+        COUNT(*) AS CUSTOMERS,
+        ROUND(AVG(CHURN_RISK_SCORE), 1) AS AVG_RISK_SCORE,
+        SUM(REVENUE_AT_RISK) AS REVENUE_AT_RISK
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      GROUP BY SENTIMENT_BUCKET
+      ORDER BY AVG_RISK_SCORE DESC
+
+  - name: "critical_risk_customer_details"
+    question: "Show me all critical risk customers with their details and risk factors"
+    sql: >
+      SELECT CUSTOMER_ID,
+             FIRST_NAME || ' ' || LAST_NAME AS NAME,
+             CITY,
+             SEGMENT,
+             CHURN_RISK_SCORE,
+             ACTIVE_POLICIES,
+             TOTAL_ACTIVE_PREMIUM,
+             LATE_PAYMENT_COUNT,
+             REJECTED_CLAIMS,
+             COMPETITOR_MENTION_COUNT,
+             COMPETITORS_NAMED,
+             RISK_FACTORS
+      FROM RETAINIQ_DB.CURATED.CUSTOMER_360
+      WHERE RISK_LEVEL = 'Critical'
+      ORDER BY CHURN_RISK_SCORE DESC

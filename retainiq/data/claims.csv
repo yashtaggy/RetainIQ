@@ -1,0 +1,301 @@
+claim_id,policy_id,customer_id,claim_date,claim_amount,approved_amount,status,category,resolution_date,rejection_reason,notes
+CLM00001,POL00446,C0080,2024-09-11,323668,,Pending,Theft,,,Pending review for over 30 days. Customer has escalated.
+CLM00002,POL00293,C0090,2025-08-07,379196,,Rejected,Third Party Liability,2025-09-20,Repairs done at unauthorized garage without prior approval,Rejected: Repairs done at unauthorized garage without prior approval
+CLM00003,POL00249,C0373,2025-09-06,35065,,Rejected,Fire,2025-10-17,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00004,POL00742,C0141,2025-05-10,19714,17413.07,Settled,Natural Disaster,2025-06-12,,Claim settled after surveyor assessment.
+CLM00005,POL00326,C0033,2025-04-13,322866,301348.14,Approved,Accident,2025-05-10,,Approved. Awaiting fund transfer.
+CLM00006,POL00264,C0034,2024-01-09,159945,,Rejected,Accident,2024-02-14,Repairs done at unauthorized garage without prior approval,Rejected: Repairs done at unauthorized garage without prior approval
+CLM00007,POL00006,C0472,2024-03-04,548450,,Rejected,Fire,2024-03-14,Damage not covered under Third Party Only plan,Rejected: Damage not covered under Third Party Only plan
+CLM00008,POL00733,C0019,2025-01-29,144865,,Pending,Third Party Liability,,,Pending review for over 30 days. Customer has escalated.
+CLM00009,POL00500,C0003,2024-02-15,211887,,Pending,Natural Disaster,,,Pending review for over 30 days. Customer has escalated.
+CLM00010,POL00521,C0189,2025-08-13,13861,10450.33,Settled,Third Party Liability,2025-09-01,,Claim settled after surveyor assessment.
+CLM00011,POL00123,C0117,2024-08-29,8326,7507.77,Approved,Accident,2024-09-03,,Approved. Awaiting fund transfer.
+CLM00012,POL00283,C0415,2025-01-03,7738,6664.51,Settled,Natural Disaster,2025-01-24,,Claim settled after surveyor assessment.
+CLM00013,POL00491,C0401,2025-01-03,76397,,Rejected,Accident,2025-02-06,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00014,POL00273,C0283,2025-08-04,3289,,Rejected,Windshield Damage,2025-09-24,Incomplete documentation: FIR copy missing,Rejected: Incomplete documentation: FIR copy missing
+CLM00015,POL00369,C0236,2024-08-13,82501,63349.12,Approved,Accident,2024-09-08,,Approved. Awaiting fund transfer.
+CLM00016,POL00036,C0076,2024-05-17,29174,,Rejected,Natural Disaster,2024-06-03,Incident occurred while driving under influence of alcohol,Rejected: Incident occurred while driving under influence of alcohol
+CLM00017,POL00420,C0015,2025-03-21,449190,340610.23,Approved,Accident,2025-03-24,,Approved. Awaiting fund transfer.
+CLM00018,POL00146,C0006,2024-10-26,12319,11615.33,Settled,Windshield Damage,2024-11-01,,Claim settled after surveyor assessment.
+CLM00019,POL00105,C0088,2024-10-14,402178,,Rejected,Accident,2024-10-26,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00020,POL00379,C0292,2024-11-15,257067,,Pending,Third Party Liability,,,Under review by claims team.
+CLM00021,POL00129,C0369,2025-04-01,268053,204876.1,Approved,Theft,2025-04-24,,Approved. Awaiting fund transfer.
+CLM00022,POL00599,C0343,2025-09-26,51312,46265.65,Settled,Third Party Liability,2025-11-02,,Claim settled after surveyor assessment.
+CLM00023,POL00591,C0402,2025-09-09,5273,4554.46,Settled,Windshield Damage,2025-09-23,,Claim settled after surveyor assessment.
+CLM00024,POL00336,C0028,2024-04-19,22695,,Rejected,Third Party Liability,2024-05-29,Incident occurred while driving under influence of alcohol,Rejected: Incident occurred while driving under influence of alcohol
+CLM00025,POL00098,C0097,2023-10-06,156507,,Rejected,Accident,2023-11-02,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00026,POL00674,C0060,2024-03-23,61286,,Rejected,Theft,2024-04-01,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00027,POL00661,C0185,2025-09-28,26693,20651.94,Settled,Accident,2025-10-25,,Claim settled after surveyor assessment.
+CLM00028,POL00358,C0043,2025-03-16,194512,,Rejected,Accident,2025-04-25,Pre-existing damage detected during surveyor inspection,Rejected: Pre-existing damage detected during surveyor inspection
+CLM00029,POL00544,C0457,2024-09-18,486424,400760.71,Settled,Theft,2024-10-10,,Claim settled after surveyor assessment.
+CLM00030,POL00784,C0068,2025-09-13,7054,,Rejected,Roadside Assistance,2025-10-09,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00031,POL00231,C0244,2025-08-08,26953,20480.08,Approved,Natural Disaster,2025-08-26,,Approved. Awaiting fund transfer.
+CLM00032,POL00776,C0095,2024-07-31,39154,,Rejected,Theft,2024-09-11,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00033,POL00595,C0009,2025-08-19,144704,,Rejected,Theft,2025-09-06,Repairs done at unauthorized garage without prior approval,Rejected: Repairs done at unauthorized garage without prior approval
+CLM00034,POL00537,C0496,2024-07-30,75204,,Rejected,Accident,2024-08-31,Policy was in lapsed state at the time of incident,Rejected: Policy was in lapsed state at the time of incident
+CLM00035,POL00257,C0361,2024-12-12,3035,,Pending,Windshield Damage,,,Under review by claims team.
+CLM00036,POL00793,C0382,2024-10-02,142157,115810.39,Approved,Third Party Liability,2024-11-01,,Approved. Awaiting fund transfer.
+CLM00037,POL00142,C0352,2025-09-16,20520,20165.52,Approved,Natural Disaster,2025-10-05,,Approved. Awaiting fund transfer.
+CLM00038,POL00333,C0020,2023-09-12,39300,,Rejected,Theft,2023-10-14,Policy was in lapsed state at the time of incident,Rejected: Policy was in lapsed state at the time of incident
+CLM00039,POL00106,C0310,2025-09-12,13589,11143.32,Settled,Accident,2025-10-05,,Claim settled after surveyor assessment.
+CLM00040,POL00014,C0005,2024-03-16,343263,,Rejected,Natural Disaster,2024-04-18,Pre-existing damage detected during surveyor inspection,Rejected: Pre-existing damage detected during surveyor inspection
+CLM00041,POL00135,C0014,2024-10-27,20906,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00042,POL00693,C0490,2024-10-16,313864,,Rejected,Theft,2024-11-05,Driver did not possess a valid driving licence,Rejected: Driver did not possess a valid driving licence
+CLM00043,POL00757,C0470,2023-10-18,137041,131838.0,Settled,Accident,2023-11-16,,Claim settled after surveyor assessment.
+CLM00044,POL00265,C0023,2023-12-27,11348,,Rejected,Roadside Assistance,2024-02-20,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00045,POL00300,C0343,2025-04-05,1693,1585.66,Settled,Windshield Damage,2025-05-03,,Claim settled after surveyor assessment.
+CLM00046,POL00424,C0054,2023-11-25,17252,17076.11,Approved,Natural Disaster,2023-12-21,,Approved. Awaiting fund transfer.
+CLM00047,POL00261,C0169,2024-10-22,20395,16792.38,Settled,Third Party Liability,2024-11-13,,Claim settled after surveyor assessment.
+CLM00048,POL00105,C0088,2025-01-28,432148,,Rejected,Natural Disaster,2025-03-25,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00049,POL00699,C0090,2024-08-17,101566,93882.69,Approved,Third Party Liability,2024-09-05,,Approved. Awaiting fund transfer.
+CLM00050,POL00145,C0004,2025-04-27,5512,5474.07,Approved,Windshield Damage,2025-05-14,,Approved. Awaiting fund transfer.
+CLM00051,POL00508,C0056,2025-08-05,181600,,Rejected,Third Party Liability,2025-08-30,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00052,POL00398,C0410,2025-08-18,14547,14182.54,Settled,Accident,2025-09-05,,Claim settled after surveyor assessment.
+CLM00053,POL00679,C0389,2025-01-23,280886,223170.15,Settled,Accident,2025-02-04,,Claim settled after surveyor assessment.
+CLM00054,POL00260,C0052,2025-07-18,79142,,Pending,Third Party Liability,,,Pending review for over 30 days. Customer has escalated.
+CLM00055,POL00504,C0052,2024-03-05,162248,,Rejected,Accident,2024-04-27,Incident occurred while driving under influence of alcohol,Rejected: Incident occurred while driving under influence of alcohol
+CLM00056,POL00508,C0056,2025-09-18,163978,,Pending,Natural Disaster,,,Pending review for over 30 days. Customer has escalated.
+CLM00057,POL00573,C0404,2025-07-28,335759,293166.38,Approved,Natural Disaster,2025-08-04,,Approved. Awaiting fund transfer.
+CLM00058,POL00780,C0152,2024-10-27,64170,52747.36,Settled,Third Party Liability,2024-11-03,,Claim settled after surveyor assessment.
+CLM00059,POL00602,C0435,2025-04-25,13288,11643.23,Approved,Roadside Assistance,2025-05-22,,Approved. Awaiting fund transfer.
+CLM00060,POL00503,C0217,2025-09-03,21406,,Pending,Accident,,,Under review by claims team.
+CLM00061,POL00101,C0464,2025-08-12,47073,45823.37,Settled,Fire,2025-08-30,,Claim settled after surveyor assessment.
+CLM00062,POL00001,C0018,2023-05-21,1481,,Rejected,Roadside Assistance,2023-07-16,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00063,POL00157,C0084,2025-09-20,32446,,Rejected,Natural Disaster,2025-10-12,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00064,POL00116,C0414,2025-05-28,258803,226281.28,Approved,Theft,2025-06-23,,Approved. Awaiting fund transfer.
+CLM00065,POL00090,C0114,2025-05-21,10766,9877.09,Settled,Windshield Damage,2025-06-21,,Claim settled after surveyor assessment.
+CLM00066,POL00115,C0211,2024-07-01,39205,34614.99,Settled,Fire,2024-07-28,,Claim settled after surveyor assessment.
+CLM00067,POL00007,C0050,2024-12-14,255977,196520.75,Approved,Fire,2024-12-20,,Approved. Awaiting fund transfer.
+CLM00068,POL00500,C0003,2024-09-14,306480,271175.75,Approved,Third Party Liability,2024-09-24,,Approved. Awaiting fund transfer.
+CLM00069,POL00785,C0082,2024-11-25,492517,372635.43,Approved,Theft,2024-12-02,,Approved. Awaiting fund transfer.
+CLM00070,POL00128,C0188,2025-09-15,384036,293662.99,Settled,Accident,2025-10-28,,Claim settled after surveyor assessment.
+CLM00071,POL00374,C0210,2024-12-03,67951,56657.4,Approved,Accident,2024-12-19,,Approved. Awaiting fund transfer.
+CLM00072,POL00063,C0091,2024-03-11,6195,,Rejected,Accident,2024-03-26,Pre-existing damage detected during surveyor inspection,Rejected: Pre-existing damage detected during surveyor inspection
+CLM00073,POL00753,C0392,2025-08-24,15804,,Rejected,Theft,2025-10-19,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00074,POL00706,C0049,2025-09-12,411354,,Rejected,Theft,2025-10-22,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00075,POL00092,C0412,2024-05-10,72521,69182.21,Settled,Accident,2024-05-17,,Claim settled after surveyor assessment.
+CLM00076,POL00415,C0295,2025-04-02,15854,12695.81,Approved,Fire,2025-04-17,,Approved. Awaiting fund transfer.
+CLM00077,POL00155,C0500,2025-09-01,17596,,Rejected,Fire,2025-10-02,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00078,POL00479,C0100,2024-10-03,24052,22519.65,Approved,Third Party Liability,2024-10-09,,Approved. Awaiting fund transfer.
+CLM00079,POL00157,C0084,2025-09-04,5161,,Pending,Windshield Damage,,,Pending review for over 30 days. Customer has escalated.
+CLM00080,POL00456,C0026,2024-02-08,19083,,Rejected,Accident,2024-03-13,Damage not covered under Third Party Only plan,Rejected: Damage not covered under Third Party Only plan
+CLM00081,POL00011,C0011,2024-04-29,333402,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00082,POL00217,C0072,2023-12-25,11553,,Pending,Windshield Damage,,,Pending review for over 30 days. Customer has escalated.
+CLM00083,POL00146,C0006,2025-08-27,22186,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00084,POL00741,C0381,2024-08-27,26150,20689.93,Settled,Third Party Liability,2024-10-06,,Claim settled after surveyor assessment.
+CLM00085,POL00607,C0075,2023-12-18,8330,,Rejected,Windshield Damage,2024-01-13,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00086,POL00377,C0289,2025-08-15,473125,361272.68,Settled,Theft,2025-09-12,,Claim settled after surveyor assessment.
+CLM00087,POL00746,C0076,2025-08-12,58726,,Rejected,Accident,2025-10-02,Incident occurred while driving under influence of alcohol,Rejected: Incident occurred while driving under influence of alcohol
+CLM00088,POL00633,C0034,2024-05-22,31943,25888.93,Settled,Accident,2024-07-02,,Claim settled after surveyor assessment.
+CLM00089,POL00109,C0067,2025-08-13,23962,19060.44,Approved,Accident,2025-08-16,,Approved. Awaiting fund transfer.
+CLM00090,POL00289,C0030,2025-09-11,91822,,Rejected,Natural Disaster,2025-11-02,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00091,POL00506,C0097,2025-06-01,25511,,Rejected,Third Party Liability,2025-07-14,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00092,POL00346,C0083,2024-04-14,289168,256831.69,Approved,Fire,2024-05-06,,Approved. Awaiting fund transfer.
+CLM00093,POL00473,C0016,2025-08-11,49451,,Rejected,Third Party Liability,2025-08-23,Incident occurred while driving under influence of alcohol,Rejected: Incident occurred while driving under influence of alcohol
+CLM00094,POL00639,C0003,2025-09-09,28998,,Rejected,Accident,2025-10-01,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00095,POL00512,C0002,2024-01-06,31986,30165.19,Approved,Accident,2024-01-18,,Approved. Awaiting fund transfer.
+CLM00096,POL00737,C0126,2025-06-01,55974,,Pending,Third Party Liability,,,Under review by claims team.
+CLM00097,POL00765,C0068,2025-09-21,56140,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00098,POL00518,C0023,2024-06-22,42038,,Rejected,Accident,2024-07-24,Driver did not possess a valid driving licence,Rejected: Driver did not possess a valid driving licence
+CLM00099,POL00754,C0037,2025-07-05,8589,,Rejected,Natural Disaster,2025-08-16,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00100,POL00738,C0238,2024-12-21,12714,10863.17,Approved,Accident,2024-12-24,,Approved. Awaiting fund transfer.
+CLM00101,POL00735,C0104,2024-05-03,668836,580882.66,Settled,Theft,2024-05-22,,Claim settled after surveyor assessment.
+CLM00102,POL00038,C0314,2025-08-20,180674,176512.18,Approved,Accident,2025-09-12,,Approved. Awaiting fund transfer.
+CLM00103,POL00551,C0344,2024-07-04,489489,474373.45,Settled,Fire,2024-07-10,,Claim settled after surveyor assessment.
+CLM00104,POL00400,C0041,2024-12-29,6647,,Pending,Windshield Damage,,,Pending review for over 30 days. Customer has escalated.
+CLM00105,POL00697,C0407,2025-09-20,12389,10636.42,Approved,Roadside Assistance,2025-09-23,,Approved. Awaiting fund transfer.
+CLM00106,POL00482,C0486,2024-03-17,13846,12145.07,Settled,Windshield Damage,2024-04-13,,Claim settled after surveyor assessment.
+CLM00107,POL00130,C0013,2025-05-09,232617,,Rejected,Third Party Liability,2025-07-05,Policy was in lapsed state at the time of incident,Rejected: Policy was in lapsed state at the time of incident
+CLM00108,POL00007,C0050,2025-07-15,414336,376046.47,Approved,Theft,2025-08-13,,Approved. Awaiting fund transfer.
+CLM00109,POL00076,C0219,2024-06-06,131334,,Rejected,Accident,2024-07-26,Policy was in lapsed state at the time of incident,Rejected: Policy was in lapsed state at the time of incident
+CLM00110,POL00168,C0309,2024-04-16,41676,35780.99,Settled,Fire,2024-05-27,,Claim settled after surveyor assessment.
+CLM00111,POL00675,C0445,2025-07-30,5127,,Rejected,Windshield Damage,2025-08-31,Pre-existing damage detected during surveyor inspection,Rejected: Pre-existing damage detected during surveyor inspection
+CLM00112,POL00259,C0105,2025-09-18,25364,,Rejected,Accident,2025-11-04,Pre-existing damage detected during surveyor inspection,Rejected: Pre-existing damage detected during surveyor inspection
+CLM00113,POL00327,C0056,2025-09-02,338111,,Rejected,Fire,2025-09-09,Incomplete documentation: FIR copy missing,Rejected: Incomplete documentation: FIR copy missing
+CLM00114,POL00301,C0300,2025-04-08,274430,224264.72,Settled,Third Party Liability,2025-05-07,,Claim settled after surveyor assessment.
+CLM00115,POL00348,C0035,2024-07-22,2913,,Pending,Roadside Assistance,,,Pending review for over 30 days. Customer has escalated.
+CLM00116,POL00647,C0241,2024-09-08,7459,5653.92,Settled,Natural Disaster,2024-10-22,,Claim settled after surveyor assessment.
+CLM00117,POL00646,C0020,2025-02-17,14489,,Pending,Windshield Damage,,,Pending review for over 30 days. Customer has escalated.
+CLM00118,POL00304,C0095,2024-09-25,7147,,Rejected,Roadside Assistance,2024-11-12,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00119,POL00641,C0326,2025-09-16,335229,323314.69,Approved,Accident,2025-09-29,,Approved. Awaiting fund transfer.
+CLM00120,POL00658,C0429,2023-09-29,660617,587196.8,Settled,Theft,2023-10-16,,Claim settled after surveyor assessment.
+CLM00121,POL00242,C0442,2025-09-10,11519,8559.7,Settled,Roadside Assistance,2025-10-08,,Claim settled after surveyor assessment.
+CLM00122,POL00467,C0453,2025-03-16,146621,124419.74,Settled,Third Party Liability,2025-04-18,,Claim settled after surveyor assessment.
+CLM00123,POL00631,C0079,2025-09-09,139002,,Rejected,Theft,2025-09-24,Incident occurred while driving under influence of alcohol,Rejected: Incident occurred while driving under influence of alcohol
+CLM00124,POL00017,C0090,2025-08-10,246672,,Rejected,Fire,2025-08-18,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00125,POL00233,C0082,2025-01-08,13220,,Pending,Windshield Damage,,,Pending review for over 30 days. Customer has escalated.
+CLM00126,POL00744,C0064,2025-07-01,7299,,Pending,Windshield Damage,,,Pending review for over 30 days. Customer has escalated.
+CLM00127,POL00754,C0037,2024-12-11,44439,41475.89,Settled,Natural Disaster,2024-12-17,,Claim settled after surveyor assessment.
+CLM00128,POL00349,C0089,2024-12-22,12053,,Rejected,Roadside Assistance,2025-01-10,Policy was in lapsed state at the time of incident,Rejected: Policy was in lapsed state at the time of incident
+CLM00129,POL00475,C0482,2025-06-17,126694,93728.18,Settled,Accident,2025-07-12,,Claim settled after surveyor assessment.
+CLM00130,POL00131,C0252,2025-08-12,94783,92389.33,Settled,Third Party Liability,2025-09-11,,Claim settled after surveyor assessment.
+CLM00131,POL00401,C0059,2025-06-13,1572204,1105561.93,Settled,Theft,2025-06-28,,Claim settled after surveyor assessment.
+CLM00132,POL00530,C0013,2024-11-13,44513,36231.31,Settled,Accident,2024-12-02,,Claim settled after surveyor assessment.
+CLM00133,POL00024,C0349,2025-09-12,11971,10059.45,Settled,Windshield Damage,2025-10-21,,Claim settled after surveyor assessment.
+CLM00134,POL00282,C0120,2024-07-18,7160,5480.81,Settled,Roadside Assistance,2024-07-27,,Claim settled after surveyor assessment.
+CLM00135,POL00645,C0083,2025-04-03,85503,65178.6,Approved,Natural Disaster,2025-04-11,,Approved. Awaiting fund transfer.
+CLM00136,POL00427,C0128,2024-12-14,9615,,Pending,Accident,,,Under review by claims team.
+CLM00137,POL00504,C0052,2024-06-17,219292,171621.76,Settled,Natural Disaster,2024-06-25,,Claim settled after surveyor assessment.
+CLM00138,POL00294,C0181,2025-08-30,13196,,Rejected,Accident,2025-10-06,Driver did not possess a valid driving licence,Rejected: Driver did not possess a valid driving licence
+CLM00139,POL00578,C0134,2025-04-27,42165,,Pending,Accident,,,Under review by claims team.
+CLM00140,POL00446,C0080,2025-03-30,49647,,Pending,Third Party Liability,,,Pending review for over 30 days. Customer has escalated.
+CLM00141,POL00565,C0380,2024-03-26,89660,86929.44,Approved,Accident,2024-04-24,,Approved. Awaiting fund transfer.
+CLM00142,POL00002,C0243,2025-04-16,28906,21911.2,Settled,Natural Disaster,2025-05-24,,Claim settled after surveyor assessment.
+CLM00143,POL00637,C0057,2025-01-15,148163,141856.72,Approved,Accident,2025-02-12,,Approved. Awaiting fund transfer.
+CLM00144,POL00594,C0083,2024-07-07,20326,,Rejected,Third Party Liability,2024-09-04,Incomplete documentation: FIR copy missing,Rejected: Incomplete documentation: FIR copy missing
+CLM00145,POL00520,C0033,2024-07-28,65285,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00146,POL00401,C0059,2025-07-18,171955,,Rejected,Natural Disaster,2025-08-08,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00147,POL00680,C0065,2025-08-10,328668,307528.83,Settled,Theft,2025-09-21,,Claim settled after surveyor assessment.
+CLM00148,POL00402,C0301,2025-01-14,117378,114811.13,Settled,Third Party Liability,2025-01-26,,Claim settled after surveyor assessment.
+CLM00149,POL00156,C0137,2025-01-31,379056,372027.66,Settled,Theft,2025-02-20,,Claim settled after surveyor assessment.
+CLM00150,POL00430,C0296,2024-12-25,43415,,Pending,Natural Disaster,,,Under review by claims team.
+CLM00151,POL00438,C0073,2023-07-07,19063,,Rejected,Theft,2023-07-19,Damage not covered under Third Party Only plan,Rejected: Damage not covered under Third Party Only plan
+CLM00152,POL00608,C0081,2024-08-03,3956,3312.46,Approved,Windshield Damage,2024-08-27,,Approved. Awaiting fund transfer.
+CLM00153,POL00525,C0036,2025-02-16,211232,,Rejected,Accident,2025-02-23,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00154,POL00617,C0227,2023-12-02,122252,,Pending,Natural Disaster,,,Under review by claims team.
+CLM00155,POL00665,C0270,2025-01-08,303546,219117.31,Settled,Accident,2025-01-24,,Claim settled after surveyor assessment.
+CLM00156,POL00525,C0036,2025-01-03,3273,2780.36,Approved,Roadside Assistance,2025-01-20,,Approved. Awaiting fund transfer.
+CLM00157,POL00233,C0082,2025-01-28,10134,,Rejected,Roadside Assistance,2025-02-19,Pre-existing damage detected during surveyor inspection,Rejected: Pre-existing damage detected during surveyor inspection
+CLM00158,POL00084,C0036,2024-06-10,156416,,Rejected,Third Party Liability,2024-06-27,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00159,POL00209,C0300,2023-08-25,226811,,Pending,Fire,,,Under review by claims team.
+CLM00160,POL00575,C0055,2024-01-16,12334,,Rejected,Roadside Assistance,2024-02-19,Repairs done at unauthorized garage without prior approval,Rejected: Repairs done at unauthorized garage without prior approval
+CLM00161,POL00542,C0065,2024-10-24,136476,,Rejected,Third Party Liability,2024-12-11,Pre-existing damage detected during surveyor inspection,Rejected: Pre-existing damage detected during surveyor inspection
+CLM00162,POL00107,C0078,2023-06-30,44688,41732.16,Approved,Accident,2023-07-19,,Approved. Awaiting fund transfer.
+CLM00163,POL00748,C0256,2024-09-24,7752,6477.25,Settled,Third Party Liability,2024-11-02,,Claim settled after surveyor assessment.
+CLM00164,POL00136,C0166,2024-08-20,216769,186497.51,Approved,Theft,2024-09-03,,Approved. Awaiting fund transfer.
+CLM00165,POL00001,C0018,2023-08-07,22824,,Rejected,Accident,2023-09-13,Driver did not possess a valid driving licence,Rejected: Driver did not possess a valid driving licence
+CLM00166,POL00501,C0161,2023-11-14,102916,91047.2,Settled,Natural Disaster,2023-12-06,,Claim settled after surveyor assessment.
+CLM00167,POL00408,C0024,2025-08-09,165962,147431.63,Settled,Accident,2025-09-12,,Claim settled after surveyor assessment.
+CLM00168,POL00320,C0086,2024-07-24,263196,,Rejected,Third Party Liability,2024-09-08,Damage not covered under Third Party Only plan,Rejected: Damage not covered under Third Party Only plan
+CLM00169,POL00176,C0385,2025-07-31,30333,,Rejected,Theft,2025-09-29,Damage not covered under Third Party Only plan,Rejected: Damage not covered under Third Party Only plan
+CLM00170,POL00522,C0319,2024-04-11,156205,155932.82,Settled,Accident,2024-04-18,,Claim settled after surveyor assessment.
+CLM00171,POL00344,C0034,2025-08-24,142464,127229.59,Settled,Accident,2025-10-08,,Claim settled after surveyor assessment.
+CLM00172,POL00370,C0415,2025-03-19,89301,,Pending,Theft,,,Under review by claims team.
+CLM00173,POL00419,C0324,2024-11-24,28608,,Rejected,Fire,2024-12-25,Driver did not possess a valid driving licence,Rejected: Driver did not possess a valid driving licence
+CLM00174,POL00396,C0426,2025-04-24,19963,15125.14,Approved,Accident,2025-04-30,,Approved. Awaiting fund transfer.
+CLM00175,POL00336,C0028,2023-09-10,22752,21021.52,Settled,Accident,2023-10-08,,Claim settled after surveyor assessment.
+CLM00176,POL00320,C0086,2024-03-30,279509,,Rejected,Accident,2024-05-01,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00177,POL00424,C0054,2023-09-12,24278,18790.87,Settled,Accident,2023-09-25,,Claim settled after surveyor assessment.
+CLM00178,POL00490,C0348,2025-08-24,146165,,Rejected,Third Party Liability,2025-09-12,Incomplete documentation: FIR copy missing,Rejected: Incomplete documentation: FIR copy missing
+CLM00179,POL00021,C0003,2024-07-25,10381,,Pending,Roadside Assistance,,,Pending review for over 30 days. Customer has escalated.
+CLM00180,POL00276,C0468,2024-06-25,21743,19659.13,Settled,Theft,2024-07-20,,Claim settled after surveyor assessment.
+CLM00181,POL00428,C0079,2023-12-21,182150,,Rejected,Natural Disaster,2024-01-08,Incident occurred while driving under influence of alcohol,Rejected: Incident occurred while driving under influence of alcohol
+CLM00182,POL00053,C0056,2024-11-22,270102,,Rejected,Theft,2024-12-13,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00183,POL00315,C0208,2024-08-19,282736,260572.15,Approved,Accident,2024-08-25,,Approved. Awaiting fund transfer.
+CLM00184,POL00644,C0081,2025-03-20,852986,778933.67,Settled,Fire,2025-04-17,,Claim settled after surveyor assessment.
+CLM00185,POL00170,C0191,2024-05-09,37088,36682.43,Approved,Accident,2024-06-08,,Approved. Awaiting fund transfer.
+CLM00186,POL00407,C0024,2025-05-24,324754,283166.68,Approved,Accident,2025-06-17,,Approved. Awaiting fund transfer.
+CLM00187,POL00800,C0012,2025-08-06,6992,6211.96,Settled,Accident,2025-08-18,,Claim settled after surveyor assessment.
+CLM00188,POL00422,C0490,2025-08-01,307495,292033.89,Settled,Natural Disaster,2025-09-05,,Claim settled after surveyor assessment.
+CLM00189,POL00458,C0141,2024-03-19,391167,371572.41,Settled,Theft,2024-04-14,,Claim settled after surveyor assessment.
+CLM00190,POL00758,C0010,2024-12-20,420997,400607.63,Settled,Accident,2025-01-07,,Claim settled after surveyor assessment.
+CLM00191,POL00388,C0174,2025-03-09,175522,128527.18,Settled,Accident,2025-04-03,,Claim settled after surveyor assessment.
+CLM00192,POL00188,C0267,2023-09-28,50484,48758.94,Settled,Accident,2023-10-29,,Claim settled after surveyor assessment.
+CLM00193,POL00159,C0079,2024-02-29,73750,69298.53,Settled,Third Party Liability,2024-04-02,,Claim settled after surveyor assessment.
+CLM00194,POL00481,C0148,2024-08-18,167731,160012.27,Settled,Accident,2024-08-29,,Claim settled after surveyor assessment.
+CLM00195,POL00542,C0065,2024-05-16,13983,13044.74,Settled,Roadside Assistance,2024-06-01,,Claim settled after surveyor assessment.
+CLM00196,POL00709,C0340,2024-06-14,291729,,Pending,Theft,,,Under review by claims team.
+CLM00197,POL00784,C0068,2025-09-27,13580,,Rejected,Third Party Liability,2025-11-11,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00198,POL00319,C0194,2023-12-20,1110,820.22,Settled,Windshield Damage,2024-01-26,,Claim settled after surveyor assessment.
+CLM00199,POL00485,C0497,2025-08-23,42777,41367.74,Settled,Fire,2025-09-18,,Claim settled after surveyor assessment.
+CLM00200,POL00175,C0064,2025-08-07,13711,,Rejected,Roadside Assistance,2025-09-03,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00201,POL00200,C0025,2024-07-21,420391,,Rejected,Natural Disaster,2024-08-25,Repairs done at unauthorized garage without prior approval,Rejected: Repairs done at unauthorized garage without prior approval
+CLM00202,POL00296,C0486,2025-01-29,92865,84677.14,Settled,Accident,2025-03-07,,Claim settled after surveyor assessment.
+CLM00203,POL00680,C0065,2025-07-02,11966,10865.64,Approved,Roadside Assistance,2025-07-28,,Approved. Awaiting fund transfer.
+CLM00204,POL00543,C0375,2025-04-17,348188,,Rejected,Theft,2025-06-13,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00205,POL00100,C0229,2025-09-09,38789,34301.69,Settled,Accident,2025-09-21,,Claim settled after surveyor assessment.
+CLM00206,POL00043,C0205,2023-10-17,8014,,Pending,Windshield Damage,,,Under review by claims team.
+CLM00207,POL00279,C0176,2025-04-26,8280,,Pending,Accident,,,Under review by claims team.
+CLM00208,POL00499,C0496,2023-11-07,165873,127535.11,Settled,Accident,2023-11-26,,Claim settled after surveyor assessment.
+CLM00209,POL00729,C0158,2024-08-19,3148,3010.92,Approved,Roadside Assistance,2024-09-17,,Approved. Awaiting fund transfer.
+CLM00210,POL00736,C0047,2025-01-23,6199,4349.66,Settled,Windshield Damage,2025-02-18,,Claim settled after surveyor assessment.
+CLM00211,POL00792,C0494,2025-06-05,112002,95920.83,Approved,Accident,2025-07-01,,Approved. Awaiting fund transfer.
+CLM00212,POL00761,C0173,2025-08-15,163996,140371.18,Settled,Accident,2025-09-28,,Claim settled after surveyor assessment.
+CLM00213,POL00135,C0014,2024-12-10,68679,,Pending,Theft,,,Pending review for over 30 days. Customer has escalated.
+CLM00214,POL00564,C0400,2025-09-18,47004,46259.61,Approved,Theft,2025-10-04,,Approved. Awaiting fund transfer.
+CLM00215,POL00088,C0446,2024-11-12,683572,673207.17,Settled,Fire,2024-12-13,,Claim settled after surveyor assessment.
+CLM00216,POL00439,C0356,2023-07-10,39009,33336.87,Settled,Third Party Liability,2023-07-25,,Claim settled after surveyor assessment.
+CLM00217,POL00513,C0234,2025-08-27,41486,39467.55,Approved,Accident,2025-09-04,,Approved. Awaiting fund transfer.
+CLM00218,POL00312,C0136,2025-09-06,2734,,Rejected,Windshield Damage,2025-11-05,Incomplete documentation: FIR copy missing,Rejected: Incomplete documentation: FIR copy missing
+CLM00219,POL00012,C0316,2023-12-11,14385,,Pending,Accident,,,Under review by claims team.
+CLM00220,POL00448,C0303,2024-12-17,24979,19102.59,Approved,Accident,2025-01-12,,Approved. Awaiting fund transfer.
+CLM00221,POL00327,C0056,2025-08-17,524415,427711.61,Approved,Fire,2025-08-25,,Approved. Awaiting fund transfer.
+CLM00222,POL00533,C0186,2024-11-08,247842,213083.13,Settled,Third Party Liability,2024-12-13,,Claim settled after surveyor assessment.
+CLM00223,POL00662,C0352,2025-04-02,50661,40236.75,Approved,Natural Disaster,2025-04-10,,Approved. Awaiting fund transfer.
+CLM00224,POL00247,C0489,2025-02-27,353467,350635.31,Settled,Theft,2025-04-08,,Claim settled after surveyor assessment.
+CLM00225,POL00164,C0269,2025-07-09,76128,72993.15,Settled,Accident,2025-07-16,,Claim settled after surveyor assessment.
+CLM00226,POL00049,C0089,2024-01-08,10913,,Rejected,Accident,2024-02-08,Incident occurred while driving under influence of alcohol,Rejected: Incident occurred while driving under influence of alcohol
+CLM00227,POL00189,C0046,2024-07-18,196248,140499.62,Settled,Natural Disaster,2024-08-03,,Claim settled after surveyor assessment.
+CLM00228,POL00079,C0058,2024-03-02,11574,,Rejected,Roadside Assistance,2024-04-07,Policy was in lapsed state at the time of incident,Rejected: Policy was in lapsed state at the time of incident
+CLM00229,POL00746,C0076,2025-09-14,417725,,Rejected,Accident,2025-10-27,Incomplete documentation: FIR copy missing,Rejected: Incomplete documentation: FIR copy missing
+CLM00230,POL00528,C0036,2024-10-17,102595,,Pending,Natural Disaster,,,Pending review for over 30 days. Customer has escalated.
+CLM00231,POL00451,C0382,2023-07-29,95462,94178.78,Settled,Accident,2023-09-11,,Claim settled after surveyor assessment.
+CLM00232,POL00260,C0052,2025-04-16,94754,,Pending,Third Party Liability,,,Pending review for over 30 days. Customer has escalated.
+CLM00233,POL00149,C0457,2025-08-07,228836,208261.21,Approved,Accident,2025-08-17,,Approved. Awaiting fund transfer.
+CLM00234,POL00236,C0165,2024-08-15,128970,,Pending,Natural Disaster,,,Under review by claims team.
+CLM00235,POL00213,C0266,2025-02-26,13012,,Rejected,Third Party Liability,2025-03-18,Repairs done at unauthorized garage without prior approval,Rejected: Repairs done at unauthorized garage without prior approval
+CLM00236,POL00338,C0215,2024-05-31,10047,7401.09,Settled,Natural Disaster,2024-07-04,,Claim settled after surveyor assessment.
+CLM00237,POL00754,C0037,2025-05-30,30761,30314.18,Approved,Accident,2025-06-20,,Approved. Awaiting fund transfer.
+CLM00238,POL00772,C0074,2025-07-12,138114,,Rejected,Accident,2025-08-27,Incident occurred while driving under influence of alcohol,Rejected: Incident occurred while driving under influence of alcohol
+CLM00239,POL00506,C0097,2024-10-10,19641,,Rejected,Accident,2024-11-14,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00240,POL00730,C0086,2025-02-10,96399,,Rejected,Accident,2025-02-20,Damage not covered under Third Party Only plan,Rejected: Damage not covered under Third Party Only plan
+CLM00241,POL00666,C0198,2024-07-17,317421,279885.97,Approved,Accident,2024-08-04,,Approved. Awaiting fund transfer.
+CLM00242,POL00639,C0003,2025-06-11,26422,26035.47,Settled,Accident,2025-07-19,,Claim settled after surveyor assessment.
+CLM00243,POL00335,C0321,2025-04-17,12360,,Rejected,Accident,2025-05-02,Policy was in lapsed state at the time of incident,Rejected: Policy was in lapsed state at the time of incident
+CLM00244,POL00357,C0191,2023-10-25,39093,,Pending,Theft,,,Under review by claims team.
+CLM00245,POL00275,C0042,2025-09-15,6457,5737.38,Approved,Accident,2025-10-07,,Approved. Awaiting fund transfer.
+CLM00246,POL00036,C0076,2024-06-13,55588,,Rejected,Fire,2024-07-18,Claim amount exceeds the Insured Declared Value (IDV),Rejected: Claim amount exceeds the Insured Declared Value (IDV)
+CLM00247,POL00109,C0067,2025-09-11,29392,,Rejected,Third Party Liability,2025-09-29,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00248,POL00314,C0142,2024-02-02,108375,,Pending,Third Party Liability,,,Under review by claims team.
+CLM00249,POL00696,C0007,2023-07-09,23227,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00250,POL00428,C0079,2024-01-15,11574,10090.21,Settled,Roadside Assistance,2024-02-25,,Claim settled after surveyor assessment.
+CLM00251,POL00096,C0302,2024-05-25,22408,21546.36,Settled,Accident,2024-06-12,,Claim settled after surveyor assessment.
+CLM00252,POL00359,C0062,2025-08-01,2533,1886.49,Settled,Roadside Assistance,2025-09-11,,Claim settled after surveyor assessment.
+CLM00253,POL00706,C0049,2025-08-23,12956,,Pending,Windshield Damage,,,Pending review for over 30 days. Customer has escalated.
+CLM00254,POL00428,C0079,2024-03-13,53483,46503.05,Approved,Third Party Liability,2024-04-05,,Approved. Awaiting fund transfer.
+CLM00255,POL00478,C0014,2025-01-12,325906,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00256,POL00789,C0044,2023-10-24,251466,227836.26,Settled,Natural Disaster,2023-11-29,,Claim settled after surveyor assessment.
+CLM00257,POL00464,C0435,2024-11-04,65382,46717.07,Settled,Third Party Liability,2024-11-18,,Claim settled after surveyor assessment.
+CLM00258,POL00085,C0260,2025-07-17,87525,79300.78,Settled,Accident,2025-08-20,,Claim settled after surveyor assessment.
+CLM00259,POL00620,C0162,2025-08-29,3287,2898.32,Settled,Windshield Damage,2025-09-08,,Claim settled after surveyor assessment.
+CLM00260,POL00769,C0055,2025-03-17,216128,210505.56,Settled,Accident,2025-03-24,,Claim settled after surveyor assessment.
+CLM00261,POL00189,C0046,2023-10-17,13366,,Rejected,Third Party Liability,2023-12-05,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00262,POL00328,C0316,2025-03-22,5074,4500.09,Settled,Windshield Damage,2025-04-09,,Claim settled after surveyor assessment.
+CLM00263,POL00025,C0098,2025-03-15,17612,,Rejected,Accident,2025-04-04,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00264,POL00542,C0065,2024-09-22,98762,,Rejected,Accident,2024-11-17,Pre-existing damage detected during surveyor inspection,Rejected: Pre-existing damage detected during surveyor inspection
+CLM00265,POL00412,C0311,2024-08-13,152872,111142.55,Settled,Accident,2024-08-19,,Claim settled after surveyor assessment.
+CLM00266,POL00298,C0082,2025-08-15,440904,353228.78,Settled,Theft,2025-08-20,,Claim settled after surveyor assessment.
+CLM00267,POL00080,C0222,2024-08-11,75587,59412.43,Settled,Third Party Liability,2024-08-24,,Claim settled after surveyor assessment.
+CLM00268,POL00240,C0106,2023-08-09,10689,10197.97,Settled,Windshield Damage,2023-09-05,,Claim settled after surveyor assessment.
+CLM00269,POL00459,C0325,2025-03-23,2081,,Rejected,Windshield Damage,2025-05-20,Claim filed after the stipulated 48-hour reporting window,Rejected: Claim filed after the stipulated 48-hour reporting window
+CLM00270,POL00621,C0362,2024-05-17,303251,237157.7,Approved,Third Party Liability,2024-06-11,,Approved. Awaiting fund transfer.
+CLM00271,POL00009,C0412,2024-08-31,467918,,Rejected,Theft,2024-10-06,Incomplete documentation: FIR copy missing,Rejected: Incomplete documentation: FIR copy missing
+CLM00272,POL00701,C0056,2025-01-22,105011,,Rejected,Accident,2025-03-05,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00273,POL00407,C0024,2025-01-25,208092,204139.29,Approved,Natural Disaster,2025-02-03,,Approved. Awaiting fund transfer.
+CLM00274,POL00200,C0025,2023-10-10,44294,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00275,POL00210,C0038,2024-08-26,131314,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00276,POL00585,C0095,2024-08-22,327044,251575.99,Settled,Accident,2024-09-27,,Claim settled after surveyor assessment.
+CLM00277,POL00560,C0246,2024-04-18,24630,21200.98,Approved,Accident,2024-05-14,,Approved. Awaiting fund transfer.
+CLM00278,POL00777,C0244,2025-07-03,1002011,770005.75,Settled,Theft,2025-07-16,,Claim settled after surveyor assessment.
+CLM00279,POL00678,C0431,2024-09-23,33059,25730.43,Settled,Natural Disaster,2024-10-08,,Claim settled after surveyor assessment.
+CLM00280,POL00353,C0221,2024-04-13,8972,8192.33,Settled,Third Party Liability,2024-05-06,,Claim settled after surveyor assessment.
+CLM00281,POL00277,C0233,2024-12-21,70375,56930.28,Settled,Accident,2025-01-20,,Claim settled after surveyor assessment.
+CLM00282,POL00696,C0007,2024-02-28,46932,,Rejected,Natural Disaster,2024-04-25,Driver did not possess a valid driving licence,Rejected: Driver did not possess a valid driving licence
+CLM00283,POL00685,C0225,2024-01-29,17153,15491.23,Settled,Third Party Liability,2024-02-25,,Claim settled after surveyor assessment.
+CLM00284,POL00332,C0200,2024-12-08,16303,,Pending,Accident,,,Under review by claims team.
+CLM00285,POL00443,C0085,2025-04-24,151648,143008.06,Settled,Theft,2025-05-28,,Claim settled after surveyor assessment.
+CLM00286,POL00295,C0240,2025-08-15,6445,6073.05,Approved,Accident,2025-09-12,,Approved. Awaiting fund transfer.
+CLM00287,POL00413,C0042,2025-09-20,18969,,Pending,Accident,,,Pending review for over 30 days. Customer has escalated.
+CLM00288,POL00099,C0228,2024-06-09,8289,6489.05,Settled,Natural Disaster,2024-06-19,,Claim settled after surveyor assessment.
+CLM00289,POL00235,C0192,2025-09-17,14596,12832.99,Approved,Theft,2025-10-15,,Approved. Awaiting fund transfer.
+CLM00290,POL00400,C0041,2025-07-15,36378,25797.26,Settled,Theft,2025-07-26,,Claim settled after surveyor assessment.
+CLM00291,POL00524,C0156,2025-06-23,126492,107835.56,Settled,Third Party Liability,2025-07-24,,Claim settled after surveyor assessment.
+CLM00292,POL00585,C0095,2024-09-06,33250,,Rejected,Accident,2024-10-04,Incomplete documentation: FIR copy missing,Rejected: Incomplete documentation: FIR copy missing
+CLM00293,POL00494,C0098,2025-02-02,14320,,Pending,Roadside Assistance,,,Pending review for over 30 days. Customer has escalated.
+CLM00294,POL00479,C0100,2025-01-17,5514,,Rejected,Roadside Assistance,2025-03-16,Incomplete documentation: FIR copy missing,Rejected: Incomplete documentation: FIR copy missing
+CLM00295,POL00346,C0083,2024-04-27,189566,133687.42,Settled,Accident,2024-05-29,,Claim settled after surveyor assessment.
+CLM00296,POL00105,C0088,2024-12-04,455575,,Rejected,Accident,2025-01-08,Vehicle used for commercial purposes under personal policy,Rejected: Vehicle used for commercial purposes under personal policy
+CLM00297,POL00225,C0044,2025-04-17,317559,240525.86,Approved,Third Party Liability,2025-04-23,,Approved. Awaiting fund transfer.
+CLM00298,POL00655,C0152,2024-02-19,109314,,Pending,Accident,,,Under review by claims team.
+CLM00299,POL00631,C0079,2025-08-10,46047,,Pending,Third Party Liability,,,Pending review for over 30 days. Customer has escalated.
+CLM00300,POL00798,C0309,2025-01-10,14735,12054.52,Settled,Roadside Assistance,2025-01-24,,Claim settled after surveyor assessment.

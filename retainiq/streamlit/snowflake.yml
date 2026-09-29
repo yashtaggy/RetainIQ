@@ -1,0 +1,13 @@
+definition_version: 2
+entities:
+  retainiq_app:
+    type: streamlit
+    identifier:
+      name: RETAINIQ_APP
+      schema: APP
+      database: RETAINIQ_DB
+    title: "RetainIQ - Customer Retention Copilot"
+    query_warehouse: RETAINIQ_WH
+    main_file: streamlit_app.py
+    artifacts:
+      - streamlit_app.py

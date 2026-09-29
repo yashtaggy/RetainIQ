@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Snowflake
+.snowflake/
+connections.toml
+
+# Environment / secrets
+.env
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated data (regeneratable with seed=42)
+data/batches/
+data/*.sql
+data/sv_escaped.txt
+data/create_sv.sql
+data/create_sv_clean.sql
